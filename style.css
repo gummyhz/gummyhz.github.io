@@ -1,0 +1,239 @@
+/* CSS files add styling rules to your content */
+
+
+/* .noto-serif-tc-<uniquifier> {
+  font-family: "Noto Serif TC", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* TOP RIGHT BOTTOM LEFT */
+
+/* TEXT STYLINGS */
+body {
+    font-family: "Noto Serif TC", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: medium;
+    margin: 0;
+    color: #221D23; /* body text color */
+    background-color: #afbe8f;
+  }
+  h1 {
+    font-size: x-large;
+    text-align: center;
+    color: #86A937; /* h1 text color */
+  }
+  h2 {
+    font-size: x-large;
+    font-weight: 900;
+    color: #28390A; /* h2 text color */
+  }
+  h3 {
+    font-size: large;
+    font-weight: 900;
+    color: #28390A;
+  }
+  a {
+  /*   color: #c8e091;  */
+    color: #6a994e;
+  }
+  button {
+    border-radius: 10px; 
+    padding:.35em; 
+    margin: 0 .25em; 
+    background-color:#EAD9C3; 
+    background: radial-gradient(ellipse closest-side, #c8e091 40%,#a7c957);
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    border: 0;
+  }
+  button:hover {
+  /*   background: radial-gradient(ellipse closest-side, #a7c957 40%, #c8e091 ); */
+    box-shadow: 
+      3px 3px 3px rgb(0 0 0 / 20%),
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .wetrocks {
+    -webkit-mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
+    -webkit-mask-composite: intersect;
+    -webkit-mask-repeat:no-repeat; /* don't forget this */
+    margin-bottom: .75em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+  }
+  .category {
+    font-weight: 900;
+  /*   font-variant: small-caps; */
+    background-color: #a7c95750 ;
+  }
+  .sc {
+    font-variant: small-caps;
+  }
+  .title {
+    /*padding: 11px 15px 11px 15px;*/
+    display: block;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    float: left;
+    margin-right: auto;
+    font-variant: small-caps;
+    font-weight: 900;
+  }
+  
+  /* NAVIGATION BAR STYLING */
+  .navbar {
+    list-style-type: none;
+    z-index:1;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    overflow: hidden;
+    background-color: #393E41;
+    position: sticky;
+    top: 0;
+    order: 1;
+    width: 100%;
+    color: #d1d1d1;
+    font-size: medium;
+    box-shadow: rgb(0 0 0 / 20%) 5px 5px 5px;
+  }
+  .page {
+    display: block;
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+    float: right;
+    margin-left: auto;
+    font-weight: 900;
+    color: #d1d1d1; /* navbar page links color */
+  }
+  .page:hover {
+    background-color: #232323; /* color of link when hovered over */
+    color: #d1d1d1;
+    text-decoration:none;
+  }
+  .active {
+    background-color: #232323; /* color of link when active */
+  }
+  .themeButton {
+    display: block;
+    text-align: center;
+    float: right;
+    color: #b0b0b0;
+    padding: 12px 15px;
+  }
+  .themeButton:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.66);
+  }
+  
+  /* CONTAINER DIV ITEM ETC STYLINGS */
+  .main {
+    margin: 1em;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .item {  
+    flex: 1;
+    min-width: 10rem;
+    margin: 0 5px 5px 5px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
+    font-size: small;
+  }
+  .card {
+    background-color: beige;
+  }
+  
+  .topMessage {
+    order: 1;
+    width: 100%;
+    display: block;
+    margin: 0px 0px 0px 0px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    background-color: #c8e091;
+  }
+  
+  /* IMAGE STYLING */
+  .center {
+    max-width: 300px;
+  }
+  
+  /* DARK THEME */
+  h1.dark {
+    color: #ffb3b3;
+  }
+  h2.dark {
+    color: #a6c957;
+  }
+  body.dark {
+    color: #a6c957;
+    background-color: #25282a;
+  }
+  .navbar.dark {
+    color: #d1d1d1;
+  }
+  .page.dark {
+    color: #d1d1d1;
+  }
+  .item.dark {
+    background-color: #386641;
+  }
+  .topMessage.dark {
+    background-color: #d45459;
+  }
+  
+  
+  
+  /* ICY THEME */
+  h1.icy {
+    color: #ffb3b3;
+  }
+  h2.icy {
+    color: #a6c957;
+  }
+  body.icy {
+    color: #a6c957;
+    background-color: #25282a;
+  }
+  .navbar.icy {
+    color: #d1d1d1;
+  }
+  .page.icy {
+    color: #d1d1d1;
+  }
+  .item.icy {
+    background-color: #386641;
+  }
+  .topMessage.icy {
+    background-color: #d45459;
+  }
+  
+  
+  /* colors:
+  light green #86A937
+  light yellow #EAD9C3
+  dark grey #221D23
+  medium grey #393E41
+  
+  light green #a7c957
+  medium olive #6a994e
+  dark green #386641
+  */
