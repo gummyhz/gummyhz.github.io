@@ -76,7 +76,7 @@ body {
   .category {
     font-weight: 900;
   /*   font-variant: small-caps; */
-    background-color: #a7c95750 ;
+    background-color: #a7c95730 ;
   }
   .sc {
     font-variant: small-caps;
@@ -143,6 +143,13 @@ body {
   .main {
     margin: 1em;
   }
+  .aboutme {
+    margin: 1em 0 1em 0;
+    padding: 1.5em;
+    background-color: beige;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -180,11 +187,11 @@ body {
   h1.dark {
     color: #ffb3b3;
   }
-  h2.dark {
+  h2.dark, h3.dark {
     color: #a6c957;
   }
   body.dark {
-    color: #a6c957;
+    color: #99AD69;
     background-color: #25282a;
   }
   .navbar.dark {
@@ -193,8 +200,11 @@ body {
   .page.dark {
     color: #d1d1d1;
   }
-  .item.dark {
-    background-color: #386641;
+  .item.dark, .card.dark {
+    background-color: #3B502F;
+  }
+  .aboutme.dark {
+    background-color: #3B502F;
   }
   .topMessage.dark {
     background-color: #d45459;
