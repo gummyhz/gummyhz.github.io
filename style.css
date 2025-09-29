@@ -153,6 +153,8 @@ body {
   .container {
     display: flex;
     justify-content: center;
+    align-items: flex-start; 
+    flex-wrap: wrap;
     flex-flow: row wrap;
     margin: 10px 0px 10px 0px;
   }
@@ -166,6 +168,8 @@ body {
   }
   .card {
     background-color: beige;
+
+    flex-grow: 0;
   }
   
   .topMessage {
