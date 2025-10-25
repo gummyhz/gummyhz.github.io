@@ -65,8 +65,16 @@ body {
       linear-gradient(to right, transparent, black 10%), 
       linear-gradient(to top, transparent, black 10%), 
       linear-gradient(black,black); /* this layer is mandatory */
+    mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
     -webkit-mask-composite: intersect;
+    mask-composite: intersect;
     -webkit-mask-repeat:no-repeat; /* don't forget this */
+    mask-repeat:no-repeat; /* don't forget this */
     margin-bottom: .75em;
     margin-left: auto;
     margin-right: auto;
@@ -78,9 +86,7 @@ body {
   /*   font-variant: small-caps; */
     background-color: #a7c95730 ;
   }
-  .sc {
-    font-variant: small-caps;
-  }
+
   .title {
     /*padding: 11px 15px 11px 15px;*/
     display: block;
@@ -141,7 +147,7 @@ body {
   
   /* CONTAINER DIV ITEM ETC STYLINGS */
   .main {
-    margin: 1em;
+    margin: 1rem;
   }
   .aboutme {
     margin: 1em 0 1em 0;
@@ -151,42 +157,45 @@ body {
     box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
   }
   .container {
+    align-content: center;
     display: flex;
     justify-content: center;
     align-items: flex-start; 
     flex-wrap: wrap;
     flex-flow: row wrap;
-    margin: 10px 0px 10px 0px;
+    margin: 1rem auto 1rem auto;
+    max-width: 100%;
   }
   
   .item {  
     flex: 1;
-    min-width: 10rem;
+    flex-grow: 1;
+    min-width: 20rem;
+    max-width: 100%;
     margin: 0 5px 5px 5px;
     box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
     font-size: small;
   }
   .card {
     background-color: beige;
-
-    flex-grow: 0;
   }
   
   .topMessage {
     order: 1;
     width: 100%;
     display: block;
-    margin: 0px 0px 0px 0px;
-    padding-top: 25px;
-    padding-bottom: 20px;
+    margin: 0;
+    padding: .5rem;
+    font-size: medium;
     background-color: #c8e091;
   }
-  
-  /* IMAGE STYLING */
-  .center {
-    max-width: 300px;
+
+  .mush {
+    display: flex;
+    max-width: 100%;
+    margin: .5rem;
   }
-  
+
   /* DARK THEME */
   h1.dark {
     color: #ffb3b3;
@@ -214,31 +223,7 @@ body {
     background-color: #d45459;
   }
   
-  
-  
-  /* ICY THEME */
-  h1.icy {
-    color: #ffb3b3;
-  }
-  h2.icy {
-    color: #a6c957;
-  }
-  body.icy {
-    color: #a6c957;
-    background-color: #25282a;
-  }
-  .navbar.icy {
-    color: #d1d1d1;
-  }
-  .page.icy {
-    color: #d1d1d1;
-  }
-  .item.icy {
-    background-color: #386641;
-  }
-  .topMessage.icy {
-    background-color: #d45459;
-  }
+
   
   
   /* colors:
