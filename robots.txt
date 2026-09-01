@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://gummyhz.github.io//sitemap.xml

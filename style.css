@@ -1,13 +1,3 @@
-/* CSS files add styling rules to your content */
-
-
-/* .noto-serif-tc-<uniquifier> {
-  font-family: "Noto Serif TC", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
 /* TOP RIGHT BOTTOM LEFT */
 
 /* TEXT STYLINGS */
@@ -17,18 +7,18 @@ body {
     font-style: normal;
     font-size: medium;
     margin: 0;
-    color: #221D23; /* body text color */
+    color: #221D23; 
     background-color: #afbe8f;
   }
   h1 {
     font-size: x-large;
     text-align: center;
-    color: #86A937; /* h1 text color */
+    color: #86A937;
   }
   h2 {
     font-size: x-large;
     font-weight: 900;
-    color: #28390A; /* h2 text color */
+    color: #28390A; 
   }
   h3 {
     font-size: large;
@@ -36,7 +26,6 @@ body {
     color: #28390A;
   }
   a {
-  /*   color: #c8e091;  */
     color: #6a994e;
   }
   button {
@@ -81,6 +70,60 @@ body {
     display: block;
     max-height: 300px;
   }
+
+  .gallery {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .fungallery {
+    -webkit-mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
+    mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+    -webkit-mask-repeat:no-repeat; /* don't forget this */
+    mask-repeat:no-repeat; /* don't forget this */
+    margin-bottom: .75em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 300px;
+  }
+
+  .plantgallery {
+    -webkit-mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
+    mask: 
+      linear-gradient(to left, transparent, black 10%), 
+      linear-gradient(transparent, black 10%), 
+      linear-gradient(to right, transparent, black 10%), 
+      linear-gradient(to top, transparent, black 10%), 
+      linear-gradient(black,black); /* this layer is mandatory */
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+    -webkit-mask-repeat:no-repeat; /* don't forget this */
+    mask-repeat:no-repeat; /* don't forget this */
+    margin-bottom: .75em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 300px;
+  }
   .category {
     font-weight: 900;
   /*   font-variant: small-caps; */
@@ -88,20 +131,94 @@ body {
   }
 
   .title {
-    /*padding: 11px 15px 11px 15px;*/
-    display: block;
-    text-align: center;
     padding: 15px 17px;
-    text-decoration: none;
-    float: left;
-    margin-right: auto;
+    color: #afbe8f;
+    font-size: large;
     font-variant: small-caps;
     font-weight: 900;
   }
   
   /* NAVIGATION BAR STYLING */
+
   .navbar {
-    list-style-type: none;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #393E41; */
+    background-color: #212805;
+  }
+
+  .navbar-links {
+    height: 100%;
+  }
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+  }
+  .navbar-links li {
+    padding: 15px 17px;
+    font-size: medium;
+    font-weight: 900;
+  }
+  .navbar-links li a {
+    text-decoration: none;
+    /* padding: 1rem; */
+    display: block;
+    color: #afbe8f;
+  }
+  .navbar-links li:hover, .navbar-links li a:hover {
+    background-color: #181D04;
+    color: #f5f5dc;
+    text-decoration:none;
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: .15rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+    height: auto;
+  }
+  
+
+  @media(max-width: 750px) {
+    .toggle-button {
+      display: flex;
+    }
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      width: 100%
+    }
+    .navbar-links ul {
+      flex-direction: column;
+      width: 100%;
+    }
+    .navbar-links li {
+      text-align: center;
+      width: 100%;
+    }
+    .navbar-links li a {
+      /* padding: .25rem .5rem; */
+      width: 100%
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+
+  }
+  .navbar {
+    /* list-style-type: none;
     z-index:1;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -113,9 +230,10 @@ body {
     width: 100%;
     color: #d1d1d1;
     font-size: medium;
-    box-shadow: rgb(0 0 0 / 20%) 5px 5px 5px;
+     */
+    /* box-shadow: rgb(0 0 0 / 20%) 5px 5px 5px; */
   }
-  .page {
+  /* .page {
     display: block;
     text-align: center;
     padding: 15px 17px;
@@ -123,14 +241,14 @@ body {
     float: right;
     margin-left: auto;
     font-weight: 900;
-    color: #d1d1d1; /* navbar page links color */
+    color: #d1d1d1; 
   }
   .page:hover {
-    background-color: #232323; /* color of link when hovered over */
+    background-color: #232323;
     color: #d1d1d1;
     text-decoration:none;
-  }
-  .active {
+  } */
+  .activepage {
     background-color: #232323; /* color of link when active */
   }
   .themeButton {
@@ -154,7 +272,7 @@ body {
     padding: 1.5em;
     background-color: beige;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
+    /* box-shadow: 5px 5px 5px rgb(0 0 0 / 20%); */
   }
   .container {
     align-content: center;
@@ -173,7 +291,7 @@ body {
     min-width: 20rem;
     max-width: 100%;
     margin: 0 5px 5px 5px;
-    box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
+    /* box-shadow: 5px 5px 5px rgb(0 0 0 / 20%); */
     font-size: small;
   }
   .card {
@@ -222,7 +340,7 @@ body {
   .topMessage.dark {
     background-color: #d45459;
   }
-  
+
 
   
   
@@ -235,4 +353,6 @@ body {
   light green #a7c957
   medium olive #6a994e
   dark green #386641
-  */
+ */
+
+
